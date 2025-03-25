@@ -239,84 +239,82 @@
 									</section>
 
 								<!-- Links -->
-									<section>
-										<h2>Even More Filler</h2>
-										<ul class="divided">
-											<li><a href="#">Quam turpis feugiat dolor</a></li>
-											<li><a href="#">Amet ornare hendrerit lectus</a></li>
-											<li><a href="#">Semper quisturpis nisi</a></li>
-											<li><a href="#">Consequat lorem phasellus</a></li>
-										</ul>
-									</section>
+<!-- Dentro de tu código existente, busca la sección de DESCARGAS y reemplázala con esto: -->
 
-							</div>
-							<div class="col-6 col-12-medium imp-medium">
+<!-- Sección de Descargas (con verificación Cloudflare) -->
+<div class="wrapper style3">
+    <div class="inner">
+        <section class="container box feature3">
+            <header class="major">
+                <h2>Descargas Disponibles</h2>
+                <p>Contenido exclusivo para miembros verificados</p>
+            </header>
+            
+            <!-- Bloque de verificación (visible inicialmente) -->
+            <div id="download-verification" style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(0,0,0,0.05); border-radius: 5px;">
+                <h3><i class="icon solid fa-shield-alt"></i> Verificación Requerida</h3>
+                <p>Por seguridad, debes verificar que no eres un bot para ver los enlaces</p>
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABCZTUMc9SojlYod" data-callback="onVerifyCallback" style="display: inline-block; margin: 15px 0;"></div>
+                <p id="verify-success" style="color: green; display: none;"><i class="icon solid fa-check-circle"></i> ¡Verificado! Mostrando enlaces...</p>
+            </div>
+            
+            <!-- Tabla de descargas (oculta inicialmente) -->
+            <div id="download-content" style="display: none;">
+                <div class="table-wrapper">
+                    <table class="alt">
+                        <thead>
+                            <tr>
+                                <th>Archivo</th>
+                                <th>Descripción</th>
+                                <th>Tamaño</th>
+                                <th>Enlace</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ModPack SotG</td>
+                                <td>Paquete de mods para Minecraft</td>
+                                <td>2.4 GB</td>
+                                <td><a href="https://drive.google.com/..." class="button small" target="_blank">Descargar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Manual de Torneos</td>
+                                <td>Guía para participantes</td>
+                                <td>15 MB</td>
+                                <td><a href="https://drive.google.com/..." class="button small" target="_blank">Descargar</a></td>
+                            </tr>
+                            <tr>
+                                <td>Mods Half Life 1</td>
+                                <td>Colección de mods clásicos</td>
+                                <td>850 MB</td>
+                                <td><a href="https://drive.google.com/..." class="button small" target="_blank">Descargar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 
-								<!-- About -->
-									<section>
-										<h2><strong>ZeroFour</strong> by HTML5 UP</h2>
-										<p>Hi! This is <strong>ZeroFour</strong>, a free, fully responsive HTML5 site
-										template by <a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a>.
-										It's <a href="http://html5up.net/license/">Creative Commons Attribution</a>
-										licensed so use it for any personal or commercial project (just credit us
-										for the design!).</p>
-										<a href="#" class="button alt icon solid fa-arrow-circle-right">Learn More</a>
-									</section>
+<!-- Agrega esto justo antes del cierre de </body> -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+// Función que se ejecuta al verificar correctamente
+function onVerifyCallback(token) {
+    document.getElementById('download-verification').style.display = 'none';
+    document.getElementById('download-content').style.display = 'block';
+    document.getElementById('verify-success').style.display = 'block';
+    
+    // Opcional: Guardar en cookie/localStorage para no pedir verificación nuevamente
+    localStorage.setItem('cf_verified', 'true');
+}
 
-								<!-- Contact -->
-									<section>
-										<h2>Get in touch</h2>
-										<div>
-											<div class="row">
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Twitter</dt>
-														<dd><a href="#">@untitled-corp</a></dd>
-														<dt>Facebook</dt>
-														<dd><a href="#">facebook.com/untitled</a></dd>
-														<dt>WWW</dt>
-														<dd><a href="#">untitled.tld</a></dd>
-														<dt>Email</dt>
-														<dd><a href="#">user@untitled.tld</a></dd>
-													</dl>
-												</div>
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Address</dt>
-														<dd>
-															1234 Fictional Rd<br />
-															Nashville, TN 00000-0000<br />
-															USA
-														</dd>
-														<dt>Phone</dt>
-														<dd>(000) 000-0000</dd>
-													</dl>
-												</div>
-											</div>
-										</div>
-									</section>
-
-							</div>
-							<div class="col-12">
-								<div id="copyright">
-									<ul class="menu">
-										<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</footer>
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+// Verificar al cargar si ya estaba verificado
+window.addEventListener('DOMContentLoaded', function() {
+    if(localStorage.getItem('cf_verified') === 'true') {
+        document.getElementById('download-verification').style.display = 'none';
+        document.getElementById('download-content').style.display = 'block';
+    }
+});
+</script>
