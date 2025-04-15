@@ -1,479 +1,133 @@
-<!DOCTYPE HTML>
-<!--
-	ZeroFour by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="es">
-	<head>
-		<title>SotG Gaming</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Estilos para el modo oscuro */
-			body.dark-mode {
-				background-color: #121212;
-				color: #f1f1f1;
-			}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unite a Nuestro Discord</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://wallpaper.forfun.com/fetch/f9/f9d0d43465ba310f7534ae7c3b8cd084.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: kenburns 20s infinite alternate;
+        }
+        
+        @keyframes kenburns {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #7289da; /* Color Discord */
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            color: #7289da;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #7289da;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #7289da;
+            border: 2px solid #7289da;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(114, 137, 218, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <h1>Se parte de esta survival party!</h1>
+        
+        <p>Si quieres contribuir, aquí está el link de donación. Sin presión, solo aprecio.</p>
+        
+        <h2>project Zomboid</h2>
+        
+        <p>visita Nuestro discord.</p>
+        
+        <div class="buttons">
+           <a href="https://discord.gg/VzdKkAXEBP" class="btn btn-secondary">Discord</a>
+            
+		   <a href="https://www.paypal.com/donate/?hosted_button_id=3TREJAY2QPX3J" class="btn btn-primary">Contribuir donar</a>
 			
-			body.dark-mode #header-wrapper,
-			body.dark-mode #footer-wrapper {
-				background-color: #1a1a1a;
-			}
-			
-			body.dark-mode article,
-			body.dark-mode .box,
-			body.dark-mode .wrapper.style2,
-			body.dark-mode .wrapper.style3 {
-				background-color: #1e1e1e;
-				color: #e1e1e1;
-			}
-			
-			body.dark-mode h1, 
-			body.dark-mode h2, 
-			body.dark-mode h3, 
-			body.dark-mode h4, 
-			body.dark-mode h5, 
-			body.dark-mode h6 {
-				color: #ffffff;
-			}
-			
-			/* Estilo del botón de modo oscuro */
-			#dark-mode-toggle {
-				position: fixed;
-				bottom: 20px;
-				right: 20px;
-				z-index: 9999;
-				background-color: #333;
-				color: white;
-				border: none;
-				border-radius: 50%;
-				width: 50px;
-				height: 50px;
-				font-size: 20px;
-				cursor: pointer;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				transition: all 0.3s ease;
-			}
-			
-			#dark-mode-toggle:hover {
-				background-color: #444;
-				transform: scale(1.1);
-			}
-			
-			body.dark-mode #dark-mode-toggle {
-				background-color: #f1f1f1;
-				color: #333;
-			}
-		</style>
-	</head>
-	<body class="homepage is-preload">
-		<!-- Botón de modo oscuro -->
-		<button id="dark-mode-toggle" title="Cambiar modo claro/oscuro">🌓</button>
-		
-		<div id="page-wrapper">
-
-			<!-- Header -->
-				<div id="header-wrapper">
-					<div class="container">
-
-						<!-- Header -->
-							<header id="header">
-								<div class="inner">
-
-									<!-- Logo -->
-										<h1><a href="index.html" id="logo">SotG Gaming</a></h1>
-
-									<!-- Nav -->
-										<nav id="nav">
-											<ul>
-												<li class="current_page_item"><a href="index.html">Inicio</a></li>
-												<li>
-													<a href="#">Comunidad</a>
-													<ul>
-														<li><a href="#">Eventos</a></li>
-														<li><a href="#">Torneos</a></li>
-														<li>
-															<a href="#">Juegos</a>
-															<ul>
-																<li><a href="#">Minecraft</a></li>
-																<li><a href="#">Half Life 1</a></li>
-																<li><a href="#">Dota 2</a></li>
-																<li><a href="#">Otros</a></li>
-															</ul>
-														</li>
-														<li><a href="#">Normas</a></li>
-													</ul>
-												</li>
-												<li><a href="left-sidebar.html">Galería</a></li>
-												<li><a href="right-sidebar.html">Equipo</a></li>
-												<li><a href="no-sidebar.html">Noticias</a></li>
-											</ul>
-										</nav>
-
-								</div>
-							</header>
-
-						<!-- Banner -->
-							<div id="banner">
-								<h2><strong>Bienvenidos:</strong> Sitio web de la Comunidad SotG Gaming 
-								<br />
-								Visítanos en <a href="http://sotg.com.ar">sotg.com.ar</a></h2>
-								<p>¿Quieres participar en nuestra comunidad? Haz clic en el botón de abajo.</p>
-								<a href="https://discord.gg/VzdKkAXEBP" class="button large icon solid fa-check-circle">Unirse a Discord</a>
-							</div>
-
-					</div>
-				</div>
-
-			<!-- Main Wrapper -->
-				<div id="main-wrapper">
-					<div class="wrapper style1">
-						<div class="inner">
-
-							<!-- Feature 1 -->
-								<section class="container box feature1">
-									<div class="row">
-										<div class="col-12">
-											<header class="first major">
-												<h2>Juegos de Estrategia en tiempo real</h2>
-												<p>¿O prefieres los clásicos retro? <strong>Tenemos una amplia selección</strong></p>
-											</header>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="images/pic01.jpg" alt="Project Zomboid" /></a>
-												<header class="second icon solid fa-user">
-													<h3>Project Zomboid</h3>
-													<p>Servidor próximamente</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="images/pic02.jpg" alt="Juegos de estrategia" /></a>
-												<header class="second icon solid fa-cog">
-													<h3>StarCraft, Dawn of War</h3>
-													<p>Lords of the Ring, WarCraft III</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-4 col-12-medium">
-											<section>
-												<a href="#" class="image featured"><img src="images/pic03.jpg" alt="Juegos de rol" /></a>
-												<header class="second icon solid fa-chart-bar">
-													<h3>Juegos de rol</h3>
-													<p>Organizados por nuestro DM (JMRexzar)</p>
-												</header>
-											</section>
-										</div>
-										<div class="col-12">
-											<p>Vive aventuras emocionantes organizadas por nuestro DM (JMRexzar), historias de estilo medieval.</p>
-										</div>
-									</div>
-								</section>
-
-						</div>
-					</div>
-					<div class="wrapper style2">
-						<div class="inner">
-
-							<!-- Feature 2 -->
-								<section class="container box feature2">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>Ordena tus comisiones</h2>
-													<p>Nuestro diseñador gráfico puede hacer realidad tus ideas</p>
-												</header>
-												<p>Ofrecemos servicios de diseño personalizado para avatares, banners y más. Trabajamos contigo para crear exactamente lo que necesitas.</p>
-												<footer>
-													<a href="#" class="button medium icon solid fa-arrow-circle-right">Contactar a Jenos Rab</a>
-												</footer>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<header class="major">
-													<h2>Aprende con nosotros</h2>
-													<p>Cursos sobre programación y desarrollo web</p>
-												</header>
-												<p>Desde fundamentos hasta temas avanzados, nuestros cursos están diseñados para ayudarte a mejorar tus habilidades técnicas.</p>
-												<footer>
-													<a href="#" class="button medium alt icon solid fa-info-circle">Contactar a Solaris</a>
-												</footer>
-											</section>
-										</div>
-									</div>
-								</section>
-
-							</div>
-					</div>
-					
-					<!-- Sección de Descargas -->
-					<div class="wrapper style3">
-						<div class="inner">
-							<section class="container box feature3">
-								<header class="major">
-									<h2>Descargas Disponibles</h2>
-									<p>Contenido exclusivo para miembros de la comunidad</p>
-								</header>
-								<div class="table-wrapper">
-									<table class="alt">
-										<thead>
-											<tr>
-												<th>Archivo</th>
-												<th>Descripción</th>
-												<th>Tamaño</th>
-												<th>Enlace</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>ModPack SotG</td>
-												<td>Paquete de mods para Minecraft</td>
-												<td>2.4 GB</td>
-												<td><a href="https://drive.google.com/..." class="button small" target="_blank">Descargar</a></td>
-											</tr>
-											<tr>
-												<td>Manual de Torneos</td>
-												<td>Guía para participantes</td>
-												<td>15 MB</td>
-												<td><a href="https://drive.google.com/..." class="button small" target="_blank">Descargar</a></td>
-											</tr>
-											<tr>
-												<td>Mods Half Life 1</td>
-												<td>Colección de mods clásicos</td>
-												<td>850 MB</td>
-												<td><a href="https://drive.google.com/..." class="button small" target="_blank">Descargar</a></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
-						</div>
-					</div>
-					
-					<div class="wrapper style3">
-						<div class="inner">
-							<div class="container">
-								<div class="row">
-									<div class="col-8 col-12-medium">
-
-										<!-- Article list -->
-											<section class="box article-list">
-												<h2 class="icon fa-file-alt">Publicaciones Recientes</h2>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic04.jpg" alt="Torneo de Half Life 1" /></a>
-														<div>
-															<header>
-																<span class="date">24 de Julio</span>
-																<h3><a href="#">Resultados del torneo de Half Life 1</a></h3>
-															</header>
-															<p>Revive los momentos más emocionantes de nuestro último torneo de Half Life 1, con equipos compitiendo en el clásico de Valve.</p>
-														</div>
-													</article>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic05.jpg" alt="Nuevos miembros" /></a>
-														<div>
-															<header>
-																<span class="date">18 de Julio</span>
-																<h3><a href="#">Bienvenida a nuevos miembros</a></h3>
-															</header>
-															<p>Conoce a nuestros nuevos integrantes y descubre cómo se unieron a nuestra creciente comunidad de gamers.</p>
-														</div>
-													</article>
-
-												<!-- Excerpt -->
-													<article class="box excerpt">
-														<a href="#" class="image left"><img src="images/pic06.jpg" alt="Evento especial" /></a>
-														<div>
-															<header>
-																<span class="date">14 de Julio</span>
-																<h3><a href="#">Próximo evento: Maratón retro</a></h3>
-															</header>
-															<p>Prepárate para nuestro maratón de juegos retro con Half Life 1, Counter Strike 1.6 y otros clásicos.</p>
-														</div>
-													</article>
-
-											</section>
-									</div>
-									<div class="col-4 col-12-medium">
-
-										<!-- Spotlight -->
-											<section class="box spotlight">
-												<h2 class="icon fa-file-alt">Destacado</h2>
-												<article>
-													<a href="#" class="image featured"><img src="images/pic07.jpg" alt="Aniversario SotG"></a>
-													<header>
-														<h3><a href="#">2° Aniversario de SotG</a></h3>
-														<p>Celebramos dos años de comunidad</p>
-													</header>
-													<p>Este mes celebramos nuestro segundo aniversario con eventos especiales, torneos exclusivos y muchas sorpresas para todos nuestros miembros.</p>
-													<p>Mira el programa completo de actividades que hemos preparado para esta celebración especial.</p>
-													<footer>
-														<a href="#" class="button alt icon solid fa-file-alt">Ver Programa Completo</a>
-													</footer>
-												</article>
-											</section>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			<!-- Footer Wrapper -->
-				<div id="footer-wrapper">
-					<footer id="footer" class="container">
-						<div class="row">
-							<div class="col-3 col-6-medium col-12-small">
-
-								<!-- Links -->
-									<section>
-										<h2>Enlaces Útiles</h2>
-										<ul class="divided">
-											<li><a href="#">Normas de la comunidad</a></li>
-											<li><a href="#">Calendario de eventos</a></li>
-											<li><a href="#">Guía para nuevos miembros</a></li>
-											<li><a href="#">Reglamento de torneos</a></li>
-											<li><a href="#">Preguntas frecuentes</a></li>
-										</ul>
-									</section>
-
-							</div>
-							<div class="col-3 col-6-medium col-12-small">
-
-								<!-- Links -->
-									<section>
-										<h2>Juegos</h2>
-										<ul class="divided">
-											<li><a href="#">Minecraft</a></li>
-											<li><a href="#">Half Life 1</a></li>
-											<li><a href="#">Dota 2</a></li>
-											<li><a href="#">Counter Strike 1.6</a></li>
-										</ul>
-									</section>
-
-								<!-- Links -->
-									<section>
-										<h2>Recursos</h2>
-										<ul class="divided">
-											<li><a href="#">Guías de juego</a></li>
-											<li><a href="#">Tutoriales</a></li>
-											<li><a href="#">Descargas</a></li>
-											<li><a href="#">Blog</a></li>
-										</ul>
-									</section>
-
-							</div>
-							<div class="col-6 col-12-medium imp-medium">
-
-								<!-- About -->
-									<section>
-										<h2><strong>SotG Gaming</strong></h2>
-										<p>Somos una comunidad de gamers apasionados por los videojuegos y los esports. Organizamos eventos, torneos y creamos contenido para jugadores de todos los niveles.</p>
-										<a href="#" class="button alt icon solid fa-arrow-circle-right">Conócenos más</a>
-									</section>
-
-								<!-- Contact -->
-									<section>
-										<h2>Contáctanos</h2>
-										<div>
-											<div class="row">
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Twitter</dt>
-														<dd><a href="#">@SotGGaming</a></dd>
-														<dt>Facebook</dt>
-														<dd><a href="#">facebook.com/SotGGaming</a></dd>
-														<dt>Instagram</dt>
-														<dd><a href="#">@SotGGaming</a></dd>
-													</dl>
-												</div>
-												<div class="col-6 col-12-small">
-													<dl class="contact">
-														<dt>Email</dt>
-														<dd><a href="#">contacto@sotg.com.ar</a></dd>
-														<dt>Discord</dt>
-														<dd><a href="#">discord.gg/sotg</a></dd>
-														<dt>Web</dt>
-														<dd><a href="#">sotg.com.ar</a></dd>
-													</dl>
-												</div>
-											</div>
-										</div>
-									</section>
-
-							</div>
-							<div class="col-12">
-								<div id="copyright">
-									<ul class="menu">
-										<li>&copy; SotG Gaming. Todos los derechos reservados</li><li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</footer>
-				</div>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-			<script>
-				// Función para el modo oscuro
-				document.addEventListener('DOMContentLoaded', function() {
-					const darkModeToggle = document.getElementById('dark-mode-toggle');
-					const body = document.body;
-					
-					// Verificar preferencia guardada
-					if (localStorage.getItem('darkMode') === 'enabled') {
-						body.classList.add('dark-mode');
-						darkModeToggle.textContent = '☀️';
-					} else {
-						darkModeToggle.textContent = '🌙';
-					}
-					
-					// Evento click del botón
-					darkModeToggle.addEventListener('click', function() {
-						body.classList.toggle('dark-mode');
-						
-						// Guardar preferencia
-						if (body.classList.contains('dark-mode')) {
-							localStorage.setItem('darkMode', 'enabled');
-							darkModeToggle.textContent = '☀️';
-						} else {
-							localStorage.setItem('darkMode', 'disabled');
-							darkModeToggle.textContent = '🌙';
-						}
-					});
-					
-					// Opcional: Detectar preferencia del sistema
-					const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-					if (prefersDarkScheme.matches && !localStorage.getItem('darkMode')) {
-						body.classList.add('dark-mode');
-						darkModeToggle.textContent = '☀️';
-						localStorage.setItem('darkMode', 'enabled');
-					}
-				});
-			</script>
-
-	</body>
+        </div>
+    </div>
+</body>
 </html>
